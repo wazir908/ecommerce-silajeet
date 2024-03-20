@@ -1,0 +1,241 @@
+/*Starting The Desktop Menu Tab including social media icons and logo Here */
+.header {
+  font-family: 'Kreon', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header {
+  background-color: transparent;
+  position: fixed;
+  padding: 20px 0;
+}
+
+.header.scrolled {
+  background: linear-gradient(to bottom, #000000, #000000);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  width: 10vw;
+  height: 10vw;
+}
+
+.logo-text {
+  font-family: 'Kreon', sans-serif;
+  font-size: 26px;
+  font-weight: 900;
+  text-decoration: none;
+  background: linear-gradient(to right, #ffffff, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes rotateIcon {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .logo-text {
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-background-clip: text;
+    font-size: 22px;
+    text-align: center;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.header__nav__menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.header__nav__menu ul li {
+  margin-right: 30px;
+}
+
+.header__nav__menu ul li:last-child {
+  margin-right: 0;
+}
+
+.header__nav__menu ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+}
+
+.header__nav__menu ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 4px;
+  background-color: transparent;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.header__nav__menu ul li a:hover::after {
+  background-color: #ffffff;
+}
+
+.header.scrolled {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.social-icons {
+  margin-left: auto;
+  text-align: right;
+}
+
+.social-icon {
+  font-size: 20px;
+  color: #fff;
+  margin-left: 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #007bff;
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 768px) {
+  .social-icons {
+    display: none;
+  }
+}
+/* Ending The Desktop Menu Tab including social media icons and logo Here */
+/*Wazir Mubashir Hussain*/
+/* Styling The Mobile Menu Tab Here */
+
+.mobile-tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, #000000, #000000);
+  z-index: 999;
+  animation: slideIn 0.8s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.mobile-tab-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  opacity: 0;
+  animation: fadeIn 0.8s ease forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.mobile-tab-bar li {
+  flex: 1;
+  text-align: center;
+}
+
+.mobile-tab-bar a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  position: relative;
+  border-radius: 50%;
+  transition: transform 0.4s ease, background-color 0.4s ease, color 0.4s ease;
+}
+
+.mobile-tab-bar a:hover {
+  transform: translateY(-8px);
+  background-color: transparent;
+  color: #000;
+}
+
+.mobile-tab-bar a span {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, -10px);
+  background-color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: auto;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.mobile-tab-bar a.active span {
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -20px);
+}
+
+.mobile-tab-bar a:hover:not(.active) span {
+  display: none;
+}
+
+.mobile-tab-bar svg {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+  transition: transform 0.4s ease, fill 0.4s ease;
+}
+
+.mobile-tab-bar a:hover svg {
+  transform: scale(1.2);
+  animation: pulse 1s infinite alternate;
+}
+
+.mobile-tab-bar li.active a {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+/* Ending The Mobile Menu Tab Here */

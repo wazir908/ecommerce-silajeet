@@ -1,0 +1,153 @@
+/* Product Component CSS */
+
+/* Card styling */
+.card {
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
+  
+  /* Row styling */
+  .row {
+    display: flex;
+  }
+  
+  /* Column styling */
+  .col-md-6 {
+    flex: 1;
+  }
+  
+  /* Main image styling */
+  .main_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+  }
+  
+  .main_image img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .main_image img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Thumbnail images styling */
+  .thumbnail_images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .thumbnail_images ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+  }
+  
+  .thumbnail_images li {
+    margin-right: 10px;
+  }
+  
+  /* Right side styling */
+  .right-side {
+    padding: 20px;
+  }
+  
+  /* Content styling */
+  .content {
+    margin-bottom: 20px;
+  }
+  
+  /* Colors, Sizes, Quantity styling */
+  .colors,
+  .sizes,
+  .quantity {
+    margin-top: 10px;
+  }
+  
+  .colors span,
+  .sizes span,
+  .quantity span {
+    margin-right: 10px;
+  }
+  
+  .colors .color,
+  .sizes .size {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    cursor: pointer;
+  }
+  
+  .colors .color.selected,
+  .sizes .size.selected {
+    border-color: #000;
+  }
+  
+  .quantity input[type="number"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 60px;
+  }
+  
+  /* Buttons styling */
+  .buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .btn {
+    flex: 1;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff; /* Blue color, can be adjusted */
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3; /* Darker shade of blue on hover */
+  }
+  
+  /* Search option styling */
+  .search-option {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .search-option .inputs {
+    margin-left: 10px;
+  }
+  
+  .search-option input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .search-option i {
+    margin-right: 10px;
+    cursor: pointer;
+  }
